@@ -5,7 +5,9 @@ permalink: /about/
 ---
 
 Some information about me!
+
 個人情報と連絡先
+
 
 ### You can have a communication with me in
 
