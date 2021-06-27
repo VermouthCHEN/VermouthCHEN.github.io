@@ -5,6 +5,6 @@ title: Nice to meet you!
 
 # About me
 
-## Resume   
+## Resume
 ## About my working in Hokkudai
 ### 研究計画書
