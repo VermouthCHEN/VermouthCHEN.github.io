@@ -10,6 +10,7 @@ description: a student in humanlife university
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://avatars.githubusercontent.com/u/85046780?s=60&v=4
+
 #
 # Flags below are optional
 #
@@ -26,9 +27,10 @@ footer-links:
   pinterest:
   rss: heart
   twitter: 
-  stackoverflow: 
-  youtube: 
-  googleplus: 
+  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+  youtube: # channel/<your_long_string> or user/<user-name>
+  googleplus: # anything in your profile username that comes after plus.google.com/
+
 
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
