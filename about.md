@@ -4,9 +4,11 @@ title: About
 permalink: /about/
 ---
 
-Some information about me!
-
-個人情報と連絡先
+### About Me
+Pet Owner
+Band Vocalist / Coryphaeus
+Backpacker
+Coffee Lovers
 
 
 ### You can have a communication with me in
@@ -16,5 +18,3 @@ Some information about me!
 ### Contact me
 
 [vermouth0110@gmail.com](mailto:vermouth0110@gmail.com)
-
-[vermouth0110@126.com](mailto:vermouth0110@126.com)
