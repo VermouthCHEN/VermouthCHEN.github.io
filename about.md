@@ -5,13 +5,13 @@ permalink: /about/
 ---
 
 ### About Me
-Pet Owner
-Band Vocalist / Coryphaeus
-Backpacker
-Coffee Lovers
+#### Pet Owner
+#### Band Vocalist / Coryphaeus
+#### Backpacker
+#### Coffee Lovers
 
 
-### You can have a communication with me in
+### Language
 
 中文 \ ENGLISH \ 日本語
 
