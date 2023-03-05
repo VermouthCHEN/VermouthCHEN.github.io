@@ -13,7 +13,7 @@ permalink: /about/
 
 ### Language
 
-中文 \ ENGLISH \ 日本語
+#### 中文 \ ENGLISH \ 日本語
 
 ### Contact me
 
