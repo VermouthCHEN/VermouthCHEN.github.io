@@ -7,7 +7,9 @@ layout: default
     {% if page.category %}<p class="eyebrow">{{ page.category }}</p>{% endif %}
     <h1>{{ page.title }}</h1>
     <div class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y年%m月%d日" }}</time>
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {% if page.lang == "en" %}{{ page.date | date: "%B %-d, %Y" }}{% elsif page.lang == "ja" %}{{ page.date | date: "%Y年%m月%d日" }}{% else %}{{ page.date | date: "%Y年%m月%d日" }}{% endif %}
+      </time>
       {% if page.location %}<span>· {{ page.location }}</span>{% endif %}
     </div>
   </header>
@@ -39,7 +41,13 @@ layout: default
   </section>
   {% endif %}
 
-  <a class="back-link" href="{{ '/' | relative_url }}">← 返回所有旅记</a>
+  {% if page.lang == "ja" %}
+    <a class="back-link" href="{{ '/ja/' | relative_url }}">← すべての記事へ</a>
+  {% elsif page.lang == "en" %}
+    <a class="back-link" href="{{ '/en/' | relative_url }}">← Back to all stories</a>
+  {% else %}
+    <a class="back-link" href="{{ '/' | relative_url }}">← 返回所有文章</a>
+  {% endif %}
 
   {% include disqus.html %}
 </article>

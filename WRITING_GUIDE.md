@@ -48,3 +48,36 @@ map_query: "Oirase Gorge, Aomori, Japan"
 location:
 map_query:
 ```
+
+## 创建中文、日文和英文版本
+
+同一篇文章建立三个 Markdown 文件，例如：
+
+- `2026-08-15-oirase-gorge-zh.md`
+- `2026-08-15-oirase-gorge-ja.md`
+- `2026-08-15-oirase-gorge-en.md`
+
+三个文件使用相同的：
+
+```yaml
+translation_key: oirase-gorge
+```
+
+语言分别填写：
+
+```yaml
+lang: zh
+lang: ja
+lang: en
+```
+
+并在三个文件中都加入：
+
+```yaml
+translations:
+  zh: /oirase-gorge-zh/
+  ja: /oirase-gorge-ja/
+  en: /oirase-gorge-en/
+```
+
+这样读者在文章页面点击 `中文 / 日本語 / EN` 时，会进入同一篇文章的对应语言版本。

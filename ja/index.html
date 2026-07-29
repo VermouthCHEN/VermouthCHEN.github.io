@@ -1,0 +1,33 @@
+---
+layout: default
+lang: ja
+translations:
+  zh: /
+  ja: /ja/
+  en: /en/
+---
+
+<section class="hero">
+  <p class="eyebrow">VERMOUTH'S TRAVEL JOURNAL</p>
+  <h1>旅の途中で、世界を見つめ直す。</h1>
+  <p class="hero-intro">日本とその先の風景、宿、味、そして人と街の間にある、目には見えにくいつながりを記録します。</p>
+</section>
+
+<div class="section-heading"><h2>最新の記事</h2></div>
+
+<div class="posts">
+  {% for post in site.posts %}
+    {% if post.lang == "ja" %}
+    <article class="post">
+      {% if post.cover %}<a class="post-thumbnail" href="{{ post.url | relative_url }}"><img src="{{ post.cover | relative_url }}" alt="{{ post.title }}"></a>{% endif %}
+      <div class="post-card-content">
+        <p class="eyebrow">{{ post.category | default: "TRAVEL NOTE" }}</p>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="post-card-meta">{{ post.date | date: "%Y.%m.%d" }}{% if post.location %} · {{ post.location }}{% endif %}</p>
+        <div class="entry">{{ post.excerpt | strip_html | truncate: 110 }}</div>
+        <a href="{{ post.url | relative_url }}" class="read-more">続きを読む →</a>
+      </div>
+    </article>
+    {% endif %}
+  {% endfor %}
+</div>

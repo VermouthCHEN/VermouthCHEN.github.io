@@ -3,6 +3,11 @@ layout: page
 title: About
 permalink: /about/
 published: true
+lang: zh
+translations:
+  zh: /about/
+  ja: /ja/about/
+  en: /en/about/
 ---
 
 <div class="about-intro">

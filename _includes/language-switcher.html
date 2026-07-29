@@ -1,0 +1,6 @@
+{% assign current_lang = page.lang | default: site.default_lang %}
+<span class="language-switcher" aria-label="Language">
+  <a href="{{ page.translations.zh | default: '/' | relative_url }}" {% if current_lang == "zh" %}class="is-active" aria-current="page"{% endif %}>中文</a>
+  <a href="{{ page.translations.ja | default: '/ja/' | relative_url }}" {% if current_lang == "ja" %}class="is-active" aria-current="page"{% endif %}>日本語</a>
+  <a href="{{ page.translations.en | default: '/en/' | relative_url }}" {% if current_lang == "en" %}class="is-active" aria-current="page"{% endif %}>EN</a>
+</span>
