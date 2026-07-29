@@ -2,17 +2,40 @@
 layout: default
 ---
 
+<section class="hero">
+  <p class="eyebrow">VERMOUTH'S TRAVEL JOURNAL</p>
+  <h1>在旅途中，重新认识世界。</h1>
+  <p class="hero-intro">记录日本与更远的地方：风景、住宿、味道，以及人与城市之间不易察觉的联系。</p>
+</section>
+
+<div class="section-heading">
+  <h2>最新旅记</h2>
+  <span>{{ site.posts | size }} stories</span>
+</div>
+
 <div class="posts">
   {% for post in site.posts %}
     <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
+      {% if post.cover %}
+      <a class="post-thumbnail" href="{{ post.url | relative_url }}">
+        <img src="{{ post.cover | relative_url }}" alt="{{ post.title }}">
+      </a>
+      {% endif %}
+      <div class="post-card-content">
+        <p class="eyebrow">{{ post.category | default: "TRAVEL NOTE" }}</p>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="post-card-meta">{{ post.date | date: "%Y.%m.%d" }}{% if post.location %} · {{ post.location }}{% endif %}</p>
+        <div class="entry">{{ post.excerpt | strip_html | truncate: 110 }}</div>
+        <a href="{{ post.url | relative_url }}" class="read-more">阅读全文 →</a>
       </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
   {% endfor %}
+
+  {% if site.posts == empty %}
+  <div class="empty-state">
+    <p class="eyebrow">THE JOURNEY BEGINS</p>
+    <h3>第一篇旅记，正在路上。</h3>
+    <p>在 GitHub 中复制 <code>_drafts/travel-post-template.md</code> 到 <code>_posts</code>，即可发布文章。</p>
+  </div>
+  {% endif %}
 </div>
