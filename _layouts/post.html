@@ -2,16 +2,44 @@
 layout: default
 ---
 
-<article class="post">
-  <h1>{{ page.title }}</h1>
+<article class="post post-detail">
+  <header class="post-header">
+    {% if page.category %}<p class="eyebrow">{{ page.category }}</p>{% endif %}
+    <h1>{{ page.title }}</h1>
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y年%m月%d日" }}</time>
+      {% if page.location %}<span>· {{ page.location }}</span>{% endif %}
+    </div>
+  </header>
+
+  {% if page.cover %}
+  <figure class="post-cover">
+    <img src="{{ page.cover | relative_url }}" alt="{{ page.title }}">
+  </figure>
+  {% endif %}
 
   <div class="entry">
     {{ content }}
   </div>
 
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
+  {% if page.map_query %}
+  <section class="location-card" aria-labelledby="map-title">
+    <div class="location-card__heading">
+      <p class="eyebrow">LOCATION</p>
+      <h2 id="map-title">{{ page.location | default: page.map_query }}</h2>
+    </div>
+    <iframe
+      title="{{ page.location | default: page.map_query }} Google Map"
+      src="https://www.google.com/maps?q={{ page.map_query | uri_escape }}&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      allowfullscreen>
+    </iframe>
+    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query={{ page.map_query | uri_escape }}" target="_blank" rel="noopener">在 Google Maps 中打开 →</a>
+  </section>
+  {% endif %}
+
+  <a class="back-link" href="{{ '/' | relative_url }}">← 返回所有旅记</a>
 
   {% include disqus.html %}
 </article>

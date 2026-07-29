@@ -18,15 +18,15 @@ html {
 }
 
 body {
-	background: $white;
-  font: 18px/1.4 $helvetica;
+  background: $white;
+  font: 17px/1.8 $helvetica;
   color: $darkGray;
 }
 
 .container {
   margin: 0 auto;
-  max-width: 740px;
-  padding: 0 10px;
+  max-width: 1040px;
+  padding: 0 28px;
   width: 100%;
 }
 
@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
   color: $darkerGray;
   font-weight: bold;
 
-  line-height: 1.7;
+  line-height: 1.35;
   margin: 1em 0 15px;
   padding: 0;
 
@@ -45,18 +45,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 42px;
   a {
     color: inherit;
   }
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 30px;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 24px;
 }
 
 h4 {
@@ -151,11 +151,11 @@ img {
 //
 
 .wrapper-masthead {
-  margin-bottom: 50px;
+  margin-bottom: 28px;
 }
 
 .masthead {
-  padding: 20px 0;
+  padding: 26px 0;
   border-bottom: 1px solid $lightGray;
 
   @include mobile {
@@ -165,8 +165,8 @@ img {
 
 .site-avatar {
   float: left;
-  width: 70px;
-  height: 70px;
+  width: 54px;
+  height: 54px;
   margin-right: 15px;
 
   @include mobile {
@@ -176,7 +176,10 @@ img {
   }
 
   img {
-    border-radius: 5px;
+    border-radius: 50%;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
   }
 }
 
@@ -196,7 +199,7 @@ img {
   cursor: pointer;
   font-family: $helveticaNeue;
   font-weight: 300;
-  font-size: 28px;
+  font-size: 24px;
   letter-spacing: 1px;
 }
 
@@ -212,9 +215,9 @@ img {
 
 nav {
   float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
+  margin-top: 15px;
   font-family: $helveticaNeue;
-  font-size: 18px;
+  font-size: 15px;
 
   @include mobile {
     float: none;
@@ -228,7 +231,7 @@ nav {
     color: $darkGray;
     text-align: right;
     font-weight: 300;
-    letter-spacing: 1px;
+    letter-spacing: .08em;
 
     @include mobile {
       margin: 0 10px;
@@ -241,9 +244,54 @@ nav {
 // .main
 //
 
-.posts > .post {
-  padding-bottom: 2em;
+.hero {
+  max-width: 760px;
+  padding: 72px 0 84px;
+
+  h1 {
+    font-size: clamp(42px, 7vw, 74px);
+    font-weight: 400;
+    letter-spacing: .02em;
+    margin: 8px 0 24px;
+  }
+}
+
+.eyebrow {
+  color: $blue;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.hero-intro {
+  color: $gray;
+  font-family: $georgia;
+  font-size: 19px;
+  max-width: 620px;
+}
+
+.section-heading {
+  align-items: baseline;
   border-bottom: 1px solid $lightGray;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 34px;
+
+  h2 { font-weight: 400; }
+  span { color: $gray; font-size: 13px; }
+}
+
+.posts {
+  display: grid;
+  gap: 36px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.posts > .post {
+  border-bottom: 1px solid $lightGray;
+  padding-bottom: 34px;
 }
 
 .posts > .post:last-child {
@@ -252,6 +300,10 @@ nav {
 }
 
 .post {
+  h3 { margin-top: 4px; }
+  h3 a { color: $darkerGray; }
+  .entry { color: $gray; }
+
   blockquote {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
@@ -266,8 +318,93 @@ nav {
   }
 
   .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 6px;
+  }
+}
+
+.post-thumbnail {
+  aspect-ratio: 4 / 3;
+  display: block;
+  margin-bottom: 22px;
+  overflow: hidden;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+    width: 100%;
+  }
+
+  &:hover img { transform: scale(1.025); }
+}
+
+.post-card-meta,
+.post-meta {
+  color: $gray;
+  font-size: 13px;
+}
+
+.post-detail {
+  margin: 70px auto;
+  max-width: 780px;
+
+  .post-header {
+    margin-bottom: 34px;
+    text-align: center;
+  }
+
+  .post-cover {
+    margin: 0 0 48px;
+    img { width: 100%; }
+  }
+
+  .entry {
+    color: $darkGray;
+    font-family: $georgia;
+    font-size: 18px;
+  }
+}
+
+.location-card {
+  background: #f5f0e8;
+  margin: 54px 0 34px;
+  padding: 26px;
+
+  h2 { font-size: 22px; margin: 0 0 18px; }
+
+  iframe {
+    border: 0;
+    height: 360px;
+    width: 100%;
+  }
+}
+
+.map-link,
+.back-link {
+  display: inline-block;
+  font-size: 14px;
+  margin-top: 14px;
+}
+
+.empty-state {
+  background: #f5f0e8;
+  grid-column: 1 / -1;
+  padding: 54px;
+  text-align: center;
+}
+
+.about-intro {
+  align-items: center;
+  display: grid;
+  gap: 48px;
+  grid-template-columns: 1.2fr .8fr;
+
+  img {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    width: 100%;
   }
 }
 
@@ -275,12 +412,31 @@ nav {
   margin-top: 50px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
+  background-color: #f5f0e8;
 }
 
 footer {
   padding: 20px 0;
   text-align: center;
+}
+
+.footer-note {
+  color: $gray;
+  font-family: $georgia;
+  font-size: 14px;
+}
+
+@include mobile {
+  .container { padding: 0 20px; }
+  .hero { padding: 42px 0 56px; }
+  .hero h1 { font-size: 42px; }
+  .posts { grid-template-columns: 1fr; }
+  .post-detail { margin-top: 42px; }
+  .post-detail .post-header h1 { font-size: 36px; }
+  .location-card { padding: 16px; }
+  .location-card iframe { height: 280px; }
+  .about-intro { grid-template-columns: 1fr; }
+  .empty-state { padding: 36px 22px; }
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
