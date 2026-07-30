@@ -8,6 +8,8 @@ translations:
   zh: /about/
   ja: /ja/about/
   en: /en/about/
+---
+
 <section class="about-copy">
   <h2>Hello, World</h2>
 
@@ -16,8 +18,7 @@ translations:
   </p>
 
   <p>
-    在这里编写你的个人介绍。你可以写自己为什么记录旅行、
-    目前在日本的生活，以及希望通过这个网站分享什么。
+    //anything about travel
   </p>
 
   <h3>Language</h3>
@@ -47,30 +48,10 @@ translations:
   </div>
 
   <h3>Contact</h3>
+
   <p>
     <a href="mailto:vermouth0110@gmail.com">
       vermouth0110@gmail.com
     </a>
   </p>
 </section>
-
-<div class="about-intro">
-  <div>
-    <p class="eyebrow">ABOUT</p>
-    <h2>Hello,World</h2>
-    <p>RECORDING,SHARING,MEMORING</p>
-  </div>
-  <img src="{{ '/6AEEABE2-1D10-4BD9-A674-A85537771C36.JPG' | relative_url }}" alt="Vermouth Chen">
-</div>
-
-### Language
-
-中文 · English · 日本語
-
-### Also Me
-
-Backpacker · Coffee lover/working in travel industry
-
-### Contact
-
-[vermouth0110@gmail.com](mailto:vermouth0110@gmail.com)
