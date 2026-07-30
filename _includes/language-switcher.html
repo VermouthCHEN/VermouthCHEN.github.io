@@ -1,6 +1,58 @@
 {% assign current_lang = page.lang | default: site.default_lang %}
+
 <span class="language-switcher" aria-label="Language">
-  <a href="{{ page.translations.zh | default: '/' | relative_url }}" {% if current_lang == "zh" %}class="is-active" aria-current="page"{% endif %}>中文</a>
-  <a href="{{ page.translations.ja | default: '/ja/' | relative_url }}" {% if current_lang == "ja" %}class="is-active" aria-current="page"{% endif %}>日本語</a>
-  <a href="{{ page.translations.en | default: '/en/' | relative_url }}" {% if current_lang == "en" %}class="is-active" aria-current="page"{% endif %}>EN</a>
+
+  {% if current_lang == "en" %}
+
+    <a href="{{ page.translations.zh | default: '/' | relative_url }}">
+      CN
+    </a>
+
+    <a href="{{ page.translations.ja | default: '/ja/' | relative_url }}">
+      JP
+    </a>
+
+    <a
+      href="{{ page.translations.en | default: '/en/' | relative_url }}"
+      class="is-active"
+      aria-current="page">
+      EN
+    </a>
+
+  {% elsif current_lang == "ja" %}
+
+    <a href="{{ page.translations.zh | default: '/' | relative_url }}">
+      中国語
+    </a>
+
+    <a
+      href="{{ page.translations.ja | default: '/ja/' | relative_url }}"
+      class="is-active"
+      aria-current="page">
+      日本語
+    </a>
+
+    <a href="{{ page.translations.en | default: '/en/' | relative_url }}">
+      英語
+    </a>
+
+  {% else %}
+
+    <a
+      href="{{ page.translations.zh | default: '/' | relative_url }}"
+      class="is-active"
+      aria-current="page">
+      中文
+    </a>
+
+    <a href="{{ page.translations.ja | default: '/ja/' | relative_url }}">
+      日语
+    </a>
+
+    <a href="{{ page.translations.en | default: '/en/' | relative_url }}">
+      英语
+    </a>
+
+  {% endif %}
+
 </span>
