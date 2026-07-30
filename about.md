@@ -18,7 +18,7 @@ translations:
   </p>
 
   <p>
-    //anything about travel
+    anything about travel
   </p>
 
   <h3>Language</h3>
@@ -37,10 +37,10 @@ translations:
       rel="noopener noreferrer">
       Instagram ↗
     </a>
-
+  <div class="social-links">
     <a
       class="social-link"
-      href="YOUR_XIAOHONGSHU_PROFILE_URL"
+      href="https://xhslink.cn/m/3iQR8xgh3Rb"
       target="_blank"
       rel="noopener noreferrer">
       小红书 ↗
@@ -55,3 +55,4 @@ translations:
     </a>
   </p>
 </section>
+---
