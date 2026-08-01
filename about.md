@@ -56,3 +56,4 @@ translations:
   </p>
 </section>
 ---
+<!-- rebuild language menu -->
