@@ -54,6 +54,5 @@ translations:
       vermouth0110@gmail.com
     </a>
   </p>
-</section>
 ---
 <!-- rebuild language menu -->
