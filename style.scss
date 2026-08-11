@@ -509,3 +509,96 @@ html[lang="en"] .hero-intro {
 }
 @import "highlights";
 @import "svg-icons";
+/* ===== Editorial paper white × true navy ===== */
+
+:root {
+  --paper-white: #fcfcfa;
+  --surface-gray: #f4f5f7;
+  --text-black: #17191c;
+  --text-gray: #686d75;
+  --true-navy: #000080;
+  --navy-hover: #00005c;
+  --navy-soft: #eeeeF8;
+  --line-gray: #dfe1e5;
+}
+
+/* 页面与页眉 */
+html,
+body,
+.wrapper-masthead,
+.masthead {
+  background-color: var(--paper-white);
+}
+
+body {
+  color: var(--text-black);
+}
+
+/* 标题 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.site-name,
+.post h3 a {
+  color: var(--text-black);
+}
+
+/* 次要文字 */
+.site-description,
+.hero-intro,
+.section-heading span,
+.post-card-meta,
+.post-meta,
+.post .entry,
+.footer-note {
+  color: var(--text-gray);
+}
+
+/* 海军蓝强调色 */
+a,
+.eyebrow,
+.language-switcher a.is-active,
+.map-link,
+.back-link,
+.read-more {
+  color: var(--true-navy);
+}
+
+a:hover,
+a:active,
+a:focus-visible {
+  color: var(--navy-hover);
+}
+
+/* 顶部普通导航 */
+nav > a {
+  color: var(--text-black);
+}
+
+nav > a:hover {
+  color: var(--true-navy);
+}
+
+/* 分割线 */
+.masthead,
+.section-heading,
+.posts > .post,
+.wrapper-footer {
+  border-color: var(--line-gray);
+}
+
+/* 原来偏米黄色的区域改成冷调纸灰 */
+.location-card,
+.empty-state,
+.wrapper-footer {
+  background-color: var(--surface-gray);
+}
+
+/* 文字选择颜色 */
+::selection {
+  color: #ffffff;
+  background-color: var(--true-navy);
+}
