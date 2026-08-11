@@ -668,3 +668,31 @@ html[lang="zh"] .post-detail .entry em {
   line-height: 1.6;
   margin-top: -4px;
 }
+
+/* ===== FINAL HEADER SETTINGS — DO NOT DUPLICATE ===== */
+
+.site-name,
+.site-name:link,
+.site-name:visited,
+.site-name:hover,
+.site-name:active,
+.site-name a,
+.site-name a:link,
+.site-name a:visited,
+.site-name a:hover,
+.site-name a:active {
+  color: #17191c !important;
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 24px;
+  font-weight: 400 !important;
+  letter-spacing: -0.02em;
+}
+
+.site-description {
+  color: #000080 !important;
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
