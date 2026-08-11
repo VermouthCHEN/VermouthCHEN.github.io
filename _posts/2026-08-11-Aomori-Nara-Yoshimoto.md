@@ -11,7 +11,7 @@ translations:
   en: /oirase-gorge-en/
 location: "青森县立美术馆"
 map_query: "chikano-185,Yasuta, Aomori, Japan"
-cover: "/images/your-cover-photo.jpg"
+cover: "/images/8A815CA9-6046-4DC4-AEBE-996C2A6BBF92.JPG"
 excerpt: "如果你喜欢奈良美智，那么一定不要错过这座城市。"
 ---
 
@@ -27,7 +27,7 @@ excerpt: "如果你喜欢奈良美智，那么一定不要错过这座城市。"
 
 提到奈良美智的雕塑作品，就不得不提到这只白色的狗狗<br>
 
-![青森县里美术馆巨型雕塑]({{ '/images/8A815CA9-6046-4DC4-AEBE-996C2A6BBF92.jpg'| relative_url }})
+![青森县里美术馆巨型雕塑](/images/8A815CA9-6046-4DC4-AEBE-996C2A6BBF92.JPG)
 
 *青森县立美术馆，摄于2022年。*
 
