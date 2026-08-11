@@ -654,3 +654,61 @@ html[lang="zh"] .post-detail .entry em {
   line-height: 1.6;
   margin-top: -4px;
 }
+/* ===== Homepage typography refinements ===== */
+
+/* 1. 网站名称：简约、加粗、海军蓝 */
+.site-name {
+  color: var(--true-navy);
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.site-name a {
+  color: inherit;
+  font-weight: inherit;
+}
+
+.site-name:hover,
+.site-name a:hover {
+  color: var(--navy-hover);
+}
+
+/* 2. VERMOUTH'S TRAVEL JOURNAL：略微放大和加粗 */
+.hero .eyebrow {
+  color: var(--true-navy);
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  line-height: 1.5;
+}
+
+/* 3. 首页介绍文字：缩小 */
+.hero-intro {
+  color: var(--text-gray);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+  max-width: 650px;
+}
+
+/* 手机显示 */
+@include mobile {
+  .site-name {
+    font-size: 22px;
+  }
+
+  .hero .eyebrow {
+    font-size: 12px;
+  }
+
+  .hero-intro {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}
