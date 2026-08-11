@@ -602,6 +602,7 @@ nav > a:hover {
   color: #ffffff;
   background-color: var(--true-navy);
 }
+
 /* ===== Chinese article typography ===== */
 
 html[lang="zh"] .post-detail .entry,
@@ -613,4 +614,30 @@ html[lang="zh"] .post-detail .entry li {
   font-style: normal;
   font-weight: 400;
   line-height: 1.9;
+}
+
+html[lang="zh"] .post-detail .entry em {
+  font-style: italic;
+}
+
+.post-detail .entry h2 {
+  font-size: 25px;
+  line-height: 1.4;
+  margin: 42px 0 16px;
+}
+
+.post-detail .entry h3 {
+  font-size: 21px;
+  line-height: 1.45;
+  margin: 34px 0 14px;
+}
+
+@include mobile {
+  .post-detail .entry h2 {
+    font-size: 23px;
+  }
+
+  .post-detail .entry h3 {
+    font-size: 20px;
+  }
 }
