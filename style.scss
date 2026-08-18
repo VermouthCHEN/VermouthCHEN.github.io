@@ -393,26 +393,26 @@ nav {
     margin-bottom: 34px;
     text-align: center;
   }
-  
-  .post-cover {
-  margin: 0 auto 48px;
-  max-width: 390px;
 
-  img {
+  .post-cover {
+    margin: 0 auto 48px;
+    max-width: 390px;
+
+    img {
+      display: block;
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  .entry img {
     display: block;
     height: auto;
-    width: 100%;
+    margin: 24px auto 12px;
+    max-width: 100%;
+    width: 360px;
   }
-}
 
-  .post-detail .entry img {
-  display: block;
-  height: auto;
-  margin: 24px auto 12px;
-  max-width: 100%;
-  width: 360px !important;
-}
-	
   .entry {
     color: $darkGray;
     font-family: $georgia;
