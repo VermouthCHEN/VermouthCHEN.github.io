@@ -393,12 +393,26 @@ nav {
     margin-bottom: 34px;
     text-align: center;
   }
-
+  
   .post-cover {
-    margin: 0 0 48px;
-    img { width: 100%; }
-  }
+  margin: 0 auto 48px;
+  max-width: 620px;
 
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+}
+
+  .post-detail .entry img {
+  display: block;
+  height: auto;
+  margin: 24px auto;
+  max-width: 620px;
+  width: 100%;
+}
+	
   .entry {
     color: $darkGray;
     font-family: $georgia;
