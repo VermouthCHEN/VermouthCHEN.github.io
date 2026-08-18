@@ -408,9 +408,9 @@ nav {
   .post-detail .entry img {
   display: block;
   height: auto;
-  margin: 24px auto;
-  max-width: 390px;
-  width: 100%;
+  margin: 24px auto 12px;
+  max-width: 100%;
+  width: 360px !important;
 }
 	
   .entry {
